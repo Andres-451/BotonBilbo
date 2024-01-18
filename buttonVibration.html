@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestVibrate</title>
+</head>
+<body>
+      
+
+    <style>
+        .pushable {
+          background: #4B0082;
+          border-radius: 12px;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          outline-offset: 4px;
+        }
+        .front {
+          display: block;
+          padding: 12px 42px;
+          border-radius: 12px;
+          font-size: 1.25rem;
+          background: #9400D3;
+          color: white;
+          transform: translateY(-6px);
+        }
+      
+        .pushable:active .front {
+          transform: translateY(-2px);
+        }
+
+      </style>
+
+
+    
+    <button class="pushable" onclick="testVibrate()"><span class="front">Vibracion</span></button>
+    
+    <p id="demo"></p>
+
+   
+
+    <script>
+        function testVibrate() {
+            document.getElementById("demo").innerHTML = "Does it vibrate? ";
+            window.navigator.vibrate([600, 1900, 600, 1900, 1900, 1900, 600, 600, 600, 1900, 1900]);
+        }
+    </script>
+
+
+</body>
+</html>
