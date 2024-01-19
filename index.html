@@ -41,15 +41,17 @@
 
    
 
-    <script>f
-        function testVibrate() {
-            document.getElementById("demo").innerHTML = "Does it vibrate? ";
-            window.navigator.vibrate([600, 1900, 600, 1900, 1900, 1900, 600, 600, 600, 1900, 1900]);
-        }
+    <script>
 
         const canVibrate = window.navigator.vibrate
         if (canVibrate) window.navigator.vibrate(100)
-        
+
+        function testVibrate() {
+            document.getElementById("demo").innerHTML = "Does it vibrate? ";
+            window.navigator.vibrate([600, 1900, 600, 1900, 1900, 1900, 600, 600, 600, 1900, 1900]);}
+
+
+
     </script>
 
 
