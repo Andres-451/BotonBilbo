@@ -42,9 +42,10 @@
    
 
     <script>
-
-        const canVibrate = window.navigator.vibrate
-        if (canVibrate) window.navigator.vibrate(100)
+      
+        let canVibrate = false;
+        if('vibrate' in navigator)
+        canVibrate = true;
 
         function testVibrate() {
             document.getElementById("demo").innerHTML = "Does it vibrate? ";
